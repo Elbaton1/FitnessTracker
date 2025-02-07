@@ -16,12 +16,12 @@ public class goal_test {
         assertFalse(g.is_achieved());
 
         g.add_progress(300);
-        assertEquals(300, g.getprogress(), "should have 300 cals now!");
-        assertFalse(g.is_achieved(), "Haven't reached 500 yet!");
+        assertEquals(300, g.getprogress(), "should have 300 cals now");
+        assertFalse(g.is_achieved(), "Haven't reached 500 yet");
 
         g.add_progress(200);
-        assertEquals(500, g.getprogress(), "should be at 500 now!");
-        assertTrue(g.is_achieved(), "We've reached the 500 target!");
+        assertEquals(500, g.getprogress(), "should be at 500 now");
+        assertTrue(g.is_achieved(), "reached the 500 target! nice");
     }
 
     @Test
@@ -31,6 +31,6 @@ public class goal_test {
             g.add_progress(-50);
         });
         assertEquals("calories cannot be negative", ex.getMessage(),
-            "Should fail if i add negative cals!");
+            "Should fail if i add negative cals");
     }
 }
