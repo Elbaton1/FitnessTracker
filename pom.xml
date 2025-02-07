@@ -26,10 +26,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <!-- The build section configures plugins: 
-       1. Surefire Plugin for running tests (matches files ending with _test.java).
-       2. Exec Maven Plugin for running the demo main method.
-  -->
   <build>
     <plugins>
       <plugin>
