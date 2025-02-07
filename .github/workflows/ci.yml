@@ -27,4 +27,4 @@ jobs:
         run: mvn test --file pom.xml
 
       - name: Run demo main method
-        run: mvn exec:java -Dexec.mainClass="com.fitness.tracker.main"
+        run: mvn exec:java -Dexec.mainClass="com.fitness.tracker.Main"

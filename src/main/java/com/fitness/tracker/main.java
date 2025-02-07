@@ -1,6 +1,6 @@
 package com.fitness.tracker;
 import java.time.LocalDate;
-public class main {
+public class Main {
     public static void main(String[] args) {
         System.out.println("=========================================");
         System.out.println("        D O P E         A S S        ");
