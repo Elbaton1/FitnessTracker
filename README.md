@@ -1,4 +1,4 @@
-By: Michael O'Brien
+## By: Michael O'Brien
 
 ## 📚 Project Overview
 
@@ -15,32 +15,43 @@ By: Michael O'Brien
 
 ### **1 Install and Build the Project**
 
+#### **If you have Maven downloaded manually**
 Run this command:
+```bash
+mvn clean install
+```
+This will compile the project and run all tests.
 
+#### **If you are running Maven from a custom location like i am **
+Run something like this command:
 ```bash
 & "C:\Users\mobri\Documents\FitnessTracker\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin\mvn.cmd" clean install
 ```
-**you would simply cd into the folder that you have your project in, then change C:\Users\mobri\Documents\FitnessTracker\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin\mvn.cmd" to match where ever you have the maven folder then run enitre command.**\
+**You would simply `cd` into the folder that you have your project in, then change `C:\Users\mobri\Documents\FitnessTracker\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin\mvn.cmd` to match wherever you have the Maven folder, then run the entire command.**
 
-**this is simply an alternative to needing to point maven in the proper enviornment variables in other words im lazy.**\
-
+**This is simply an alternative to needing to point Maven in the proper environment variables—in other words, I'm lazy.**
 
 ---
 
 ### **2️ Run the Fitness Tracker**
 
+#### **If you have Maven downloaded normally**
 Run this command:
+```bash
+mvn clean compile exec:java -Dexec.mainClass=com.fitness.tracker.Main
+```
 
+#### **If you are running Maven from a custom location like me again**
+Run something like this command:
 ```bash
 & "C:\Users\mobri\Documents\FitnessTracker\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin\mvn.cmd" clean compile exec:java "-Dexec.mainClass=com.fitness.tracker.Main"
 ```
 
- **same thing you would simply cd into the folder that you have your project in, then change C:\Users\mobri\Documents\FitnessTracker\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin\mvn.cmd" to match where ever you have the maven folder then run enitre command.**\
-
+**Same thing—you would simply `cd` into the folder that you have your project in, then change `C:\Users\mobri\Documents\FitnessTracker\apache-maven-3.9.9-bin\apache-maven-3.9.9\bin\mvn.cmd` to match wherever you have the Maven folder, then run the entire command.**
 
 ---
 
-## Whats In The Project?
+## What's In The Project?
 
 ```
 FitnessTracker/
@@ -62,7 +73,7 @@ FitnessTracker/
 
 ---
 
-## Output
+## Main.java Output
 
 ```
 =========================================
@@ -86,6 +97,23 @@ Demo complete. you're unstoppable.
 
 ---
 
-## Github actions 
+## GitHub Actions 
 
-in order to see all tests pass without needing to download the repo, simply press actions and click a workflow run "theyre all the same just different commits" and click re-run all jobs to verify i aint lyin to ya but you can just simply see the green check next to the build so you know its all good!
+In order to see all tests pass without needing to download the repo, simply press **Actions** and click a workflow run (they're all the same, just different commits). Then click **Re-run all jobs** to verify I'm not lyin to ya or just check the green check next to the build so you know it's all good!
+
+---
+
+## Dependencies
+
+This project uses the following dependencies, which Maven will automatically install:
+
+- **JUnit 5** – Used for unit testing.
+- **Maven Surefire Plugin** – Runs the JUnit tests (included in Maven).
+- **Obviously, you need Maven and Java to do this.**
+
+You can find all this located in the `pom.xml` file.
+
+
+
+
+## ps: i love making the readme its the best part haha, im very proud of my readme's lol.
