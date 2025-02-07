@@ -6,12 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
 
-/*
- * workout_test class:
- *  - Checks valid creation
- *  - Ensures we fail if duration <= 0
- *  - Ensures we fail if calos < 0
- */
+
 public class workout_test {
 
     @Test
