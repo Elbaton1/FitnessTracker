@@ -2,24 +2,23 @@ package com.fitness.tracker;
 
 import java.time.LocalDate;
 
-
 public class workout {
     private LocalDate date;
     private String type;
-    private int duration;   // minutes
-    private int calories;   // burned
+    private int dur;     // minutes
+    private int calos;   // burned
 
-    public workout(LocalDate date, String type, int duration, int calories) {
-        if (duration <= 0) {
-            throw new IllegalArgumentException("duration must be positive");
+    public workout(LocalDate date, String type, int dur, int calos) {
+        if (dur <= 0) {
+            throw new IllegalArgumentException("duration gotta be positive");
         }
-        if (calories < 0) {
-            throw new IllegalArgumentException("calories cannot be negative");
+        if (calos < 0) {
+            throw new IllegalArgumentException("calories cant be negative");
         }
         this.date = date;
         this.type = type;
-        this.duration = duration;
-        this.calories = calories;
+        this.dur = dur;
+        this.calos = calos;
     }
 
     public workout() {}
@@ -40,26 +39,26 @@ public class workout {
         this.type = type;
     }
 
-    public int getduration() {
-        return duration;
+    public int getDur() {
+        return dur;
     }
 
-    public void setduration(int duration) {
-        if (duration <= 0) {
-            throw new IllegalArgumentException("duration must be positive");
+    public void setDur(int dur) {
+        if (dur <= 0) {
+            throw new IllegalArgumentException("duration gotta be positive");
         }
-        this.duration = duration;
+        this.dur = dur;
     }
 
-    public int getcalories() {
-        return calories;
+    public int getCalos() {
+        return calos;
     }
 
-    public void setcalories(int calories) {
-        if (calories < 0) {
-            throw new IllegalArgumentException("calories cannot be negative");
+    public void setCalos(int calos) {
+        if (calos < 0) {
+            throw new IllegalArgumentException("calories cant be negative");
         }
-        this.calories = calories;
+        this.calos = calos;
     }
 
     @Override
@@ -67,8 +66,8 @@ public class workout {
         return "workout{" +
                 "date=" + date +
                 ", type='" + type + '\'' +
-                ", duration=" + duration +
-                ", calories=" + calories +
+                ", dur=" + dur +
+                ", calos=" + calos +
                 '}';
     }
 }
