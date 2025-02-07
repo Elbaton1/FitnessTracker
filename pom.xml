@@ -5,21 +5,20 @@
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-<!-- create snapshot -->
+  <!-- create snapshot -->
   <groupId>com.fitness.tracker</groupId>
   <artifactId>FitnessTracker</artifactId>
   <version>1.0-SNAPSHOT</version>
   <name>FitnessTracker</name>
-<!-- compile snapshot -->
+  <!-- compile snapshot -->
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <junit.jupiter.version>5.9.2</junit.jupiter.version>
   </properties>
-<!-- dependencies -->
+  <!-- dependencies -->
   <dependencies>
-    
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
@@ -27,10 +26,12 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-<!-- i still dont 100% understand this part i looked at a few different srources but from what i understand, this allows be me to run anything that ends in test.java im sorry if its wrong -->
+  <!-- The build section configures plugins: 
+       1. Surefire Plugin for running tests (matches files ending with _test.java).
+       2. Exec Maven Plugin for running the demo main method.
+  -->
   <build>
     <plugins>
-      
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
@@ -41,7 +42,15 @@
           </includes>
         </configuration>
       </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.1.0</version>
+        <configuration>
+          
+          <mainClass>com.fitness.tracker.main</mainClass>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
-
