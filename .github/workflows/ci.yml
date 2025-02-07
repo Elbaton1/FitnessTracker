@@ -1,23 +1,35 @@
-name: java ci
+name: Build and Run Demo
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
-  build:
+  build-and-run:
     runs-on: ubuntu-latest
 
     steps:
-      - name: checkout code
+      
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: set up jdk 17
+      
+      - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
           distribution: temurin
-          java-version: "17"
+          java-version: '17'
 
-      - name: build with maven
+      
+      - name: Build with Maven
         run: mvn clean install
 
-      - name: run tests
+      
+      - name: Run tests
         run: mvn test
+
+     
+      - name: Run Demo
+        run: java -jar target/FitnessTracker-1.0-SNAPSHOT.jar

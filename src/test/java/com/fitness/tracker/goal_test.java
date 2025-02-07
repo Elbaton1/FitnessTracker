@@ -19,7 +19,7 @@ public class goal_test {
 
         g.addProg(300);
         assertEquals(300, g.getProg(), "should have 300 cals now");
-        assertFalse(g.isAchieved(), "Haven't reached 500 yet");
+        assertFalse(g.isAchieved(), "havent reached 500 yet");
 
         g.addProg(200);
         assertEquals(500, g.getProg(), "should be at 500 now");
@@ -35,6 +35,6 @@ public class goal_test {
         });
 
         assertEquals("calories cant be negative", ex.getMessage(),
-                "Should fail if I add negative cals");
+                "should fail if I add negative cals");
     }
 }

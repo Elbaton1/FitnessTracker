@@ -3,9 +3,7 @@ package com.fitness.tracker;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
- * manages multiple workouts and goals
- */
+
 public class tracker {
     private List<workout> workouts;
     private List<goal> goals;
@@ -26,7 +24,7 @@ public class tracker {
     public int total_calories() {
         int sum = 0;
         for (workout w : workouts) {
-            sum += w.getCalos();    // Updated reference to getCalos()
+            sum += w.getCalos();    
         }
         return sum;
     }
@@ -43,13 +41,13 @@ public class tracker {
         if (!goals.contains(g)) {
             throw new IllegalArgumentException("goal not found");
         }
-        g.addProg(cals);          // Updated reference to addProg(...)
+        g.addProg(cals);          
     }
 
     public boolean check_goal(goal g) {
         if (!goals.contains(g)) {
             throw new IllegalArgumentException("goal not found");
         }
-        return g.isAchieved();    // Updated reference to isAchieved()
+        return g.isAchieved();    
     }
 }

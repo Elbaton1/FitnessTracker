@@ -1,9 +1,12 @@
 package com.fitness.tracker;
 
+import java.time.LocalDate;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
-import java.time.LocalDate;
 
 public class tracker_test {
 
@@ -40,7 +43,7 @@ public class tracker_test {
 
         fit_tracker.update_goal(g, fit_tracker.total_calories());
         assertTrue(fit_tracker.check_goal(g),
-            "We've burned 750, passed the 700 goal");
+            "you burned 750, passed the 700 goal");
     }
 
     @Test
