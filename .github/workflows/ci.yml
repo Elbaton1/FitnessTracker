@@ -21,10 +21,10 @@ jobs:
           java-version: '17'
 
       - name: Build project
-        run: mvn -B package --file pom.xml
+        run: mvn -B clean compile --file pom.xml
 
       - name: Run tests
         run: mvn test --file pom.xml
 
       - name: Run demo main method
-        run: mvn exec:java -Dexec.mainClass="com.fitness.tracker.Main"
+        run: mvn clean compile exec:java "-Dexec.mainClass=com.fitness.tracker.Main"
